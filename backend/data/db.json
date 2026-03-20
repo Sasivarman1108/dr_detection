@@ -1,0 +1,210 @@
+{
+  "users": [
+    {
+      "id": "user-doctor-1",
+      "name": "Doctor User",
+      "email": "doctor@drishtiai.local",
+      "password": "Doctor@123",
+      "role": "doctor",
+      "title": "Ophthalmologist",
+      "initials": "DU"
+    },
+    {
+      "id": "user-staff-1",
+      "name": "Staff User",
+      "email": "staff@drishtiai.local",
+      "password": "Staff@123",
+      "role": "staff",
+      "title": "Camp Staff",
+      "initials": "SU"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "dcce9a001e8fee46ade4a6bfc9c5029b3be2cf383cd21be7",
+      "userId": "user-doctor-1",
+      "createdAt": "2026-03-20T18:36:28.368Z"
+    }
+  ],
+  "settings": {
+    "defaultQueueFilter": "Pending",
+    "showReviewedInPatients": true,
+    "urgentAlerts": true,
+    "reportReminders": true,
+    "reportTemplate": "Referral Advice",
+    "campName": ""
+  },
+  "staffMembers": [],
+  "patients": [
+    {
+      "id": "patient-1774033073735",
+      "patientId": "pt-1111",
+      "name": "ere",
+      "initials": "E",
+      "age": 56,
+      "gender": "M",
+      "eye": "OD",
+      "stage": "Severe",
+      "stageTone": "severe",
+      "confidence": 53,
+      "uploaded": "Just now",
+      "priority": "high",
+      "avatarGradient": "orange",
+      "reviewStatus": "Reviewed",
+      "report": "",
+      "imageUrl": "/uploads/1774033073715-download-(4).jpg",
+      "preprocessedImageUrl": "/uploads/processed/patient-1774033073735_preprocessed.jpg",
+      "confidenceByStage": {
+        "nodr": 1,
+        "mild": 0,
+        "moderate": 1,
+        "severe": 53,
+        "pdr": 46
+      },
+      "modelSummary": "Predicted Severe with 52.9% confidence.",
+      "lesions": [
+        {
+          "name": "Severe",
+          "label": "Model probability",
+          "confidence": 0.5294
+        },
+        {
+          "name": "Proliferative",
+          "label": "Model probability",
+          "confidence": 0.4575
+        },
+        {
+          "name": "Moderate",
+          "label": "Model probability",
+          "confidence": 0.0064
+        }
+      ],
+      "predictionSource": "model",
+      "reviewStatusTone": "pending"
+    },
+    {
+      "id": "patient-1774031913922",
+      "patientId": "pt-119",
+      "name": "sasi",
+      "initials": "S",
+      "age": 41,
+      "gender": "M",
+      "eye": "OD",
+      "stage": "Mild NPDR",
+      "stageTone": "mild",
+      "confidence": 80,
+      "uploaded": "Just now",
+      "priority": "low",
+      "avatarGradient": "green",
+      "reviewStatus": "Pending",
+      "report": "",
+      "imageUrl": "/uploads/1774031913921-images.jpg",
+      "preprocessedImageUrl": "/uploads/1774031913921-images.jpg",
+      "confidenceByStage": {
+        "nodr": 5,
+        "mild": 80,
+        "moderate": 5,
+        "severe": 5,
+        "pdr": 5
+      },
+      "modelSummary": "",
+      "lesions": [],
+      "reviewStatusTone": "pending"
+    },
+    {
+      "id": "patient-1774031814718",
+      "patientId": "pt-11",
+      "name": "sasi",
+      "initials": "S",
+      "age": 23,
+      "gender": "M",
+      "eye": "OD",
+      "stage": "No DR",
+      "stageTone": "nodr",
+      "confidence": 74,
+      "uploaded": "Just now",
+      "priority": "low",
+      "avatarGradient": "green",
+      "reviewStatus": "Pending",
+      "report": "",
+      "imageUrl": "/uploads/1774031814717-images.jpg",
+      "preprocessedImageUrl": "/uploads/1774031814717-images.jpg",
+      "confidenceByStage": {
+        "nodr": 74,
+        "mild": 7,
+        "moderate": 7,
+        "severe": 6,
+        "pdr": 6
+      },
+      "modelSummary": "",
+      "lesions": [],
+      "reviewStatusTone": "pending"
+    }
+  ],
+  "activities": [
+    {
+      "id": "activity-1774033210007",
+      "tone": "done",
+      "icon": "OK",
+      "message": "ere marked as Reviewed",
+      "time": "Just now",
+      "source": "Doctor Review"
+    },
+    {
+      "id": "activity-1774033208779",
+      "tone": "done",
+      "icon": "OK",
+      "message": "ere marked as Under Review",
+      "time": "Just now",
+      "source": "Doctor Review"
+    },
+    {
+      "id": "activity-1774033154778-1",
+      "tone": "model",
+      "icon": "AI",
+      "message": "Severe predicted for pt-1111",
+      "time": "Just now",
+      "source": "Model Inference"
+    },
+    {
+      "id": "activity-1774033154778-2",
+      "tone": "upload",
+      "icon": "UP",
+      "message": "Scan uploaded for pt-1111",
+      "time": "Just now",
+      "source": "Doctor Upload"
+    },
+    {
+      "id": "activity-1774031928962-1",
+      "tone": "model",
+      "icon": "AI",
+      "message": "Mild NPDR predicted for pt-119",
+      "time": "Just now",
+      "source": "Mock Prediction"
+    },
+    {
+      "id": "activity-1774031928962-2",
+      "tone": "upload",
+      "icon": "UP",
+      "message": "Scan uploaded for pt-119",
+      "time": "Just now",
+      "source": "Doctor Upload"
+    },
+    {
+      "id": "activity-1774031829750-1",
+      "tone": "model",
+      "icon": "AI",
+      "message": "No DR predicted for pt-11",
+      "time": "Just now",
+      "source": "Mock Prediction"
+    },
+    {
+      "id": "activity-1774031829750-2",
+      "tone": "upload",
+      "icon": "UP",
+      "message": "Scan uploaded for pt-11",
+      "time": "Just now",
+      "source": "Doctor Upload"
+    }
+  ]
+}
