@@ -81,6 +81,14 @@ This makes it more useful for real-world camp and clinic settings than a plain i
 ## DEPLOYED IN VERCEL
 
 https://drdetectionhackwings.vercel.app
+Default Login Credentials
+doctor@drishtiai.local
+Doctor@123
+
+Staff:
+staff@drishtiai.local
+Staff@123
+
 ### Clone And Install
 
 ```powershell
