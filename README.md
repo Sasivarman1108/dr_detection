@@ -83,11 +83,11 @@ This makes it more useful for real-world camp and clinic settings than a plain i
 https://drdetectionhackwings.vercel.app
 Default Login Credentials
 doctor@drishtiai.local
-Doctor@123
+PASSWORD :Doctor@123
 
 Staff:
 staff@drishtiai.local
-Staff@123
+PASSWORD : Staff@123
 
 ### Clone And Install
 
