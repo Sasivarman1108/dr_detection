@@ -1,51 +1,41 @@
 # Deployment Guide
 
-## Recommended Architecture
+This guide explains how to run Wings AI on another computer for evaluation.
 
-- Frontend: Vercel
-- Backend: Render / Railway / VPS
+## Project Overview
 
-This project should not be deployed fully on Vercel as-is because the backend depends on:
-- local file uploads
-- a writable JSON data file
-- Python/TensorFlow model execution
+Wings AI is a diabetic retinopathy screening and triage platform with:
+- React frontend
+- Node.js + Express backend
+- Python + TensorFlow based ML inference
 
-## Frontend Deployment (Vercel)
+## Prerequisites
 
-1. Import this repo into Vercel.
-2. Set the root directory to the project root.
-3. Set the build command to:
+Install these first:
 
-   `npm run build`
-
-4. Set the output directory to:
-
-   `build`
-
-5. Add the environment variable:
-
-   `REACT_APP_API_BASE=https://<your-backend-domain>`
-
-## Backend Deployment
-
-Deploy the `backend` app on a server that supports:
 - Node.js
+- npm
 - Python 3.11
-- TensorFlow
-- writable local storage or persistent volume
+- Git
 
-Required backend environment variables:
+## Step 1: Clone The Repository
 
-```text
+```powershell
+git clone https://github.com/Sasivarman1108/dr_detection.git
+cd dr_detection
+npm install
+cd backend
+npm install
+cd ..
+cd C:\Users\Sasi\Downloads\retinascan\ml
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
 PORT=5000
-ML_PYTHON_BIN=/path/to/python
-ML_CHECKPOINT_PATH=/path/to/efficientnet_best_model.keras
+ML_PYTHON_BIN=C:\Users\Sasi\Downloads\retinascan\ml\.venv\Scripts\python.exe
+ML_CHECKPOINT_PATH=C:\Users\Sasi\Downloads\retinascan\ml\models\efficientnet_best_model.keras
 ML_INFERENCE_TIMEOUT_MS=120000
-CORS_ORIGINS=http://localhost:3000,https://<your-vercel-domain>
-```
+CORS_ORIGINS=http://localhost:3000
 
-## Important Notes
 
-- `backend/uploads` must be writable in production.
-- `backend/data/db.json` is currently file-based storage and should persist between restarts if you want saved users/patients.
-- If you want a production-grade deployment, replace the JSON database and local uploads with managed storage.
